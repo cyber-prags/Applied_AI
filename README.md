@@ -35,7 +35,7 @@ $$
 \[ F1_{\text{Macro}} = \frac{1}{N} \sum_{i=1}^{N} F1_i \]
 $$
 
-where \( F1_i \) is the F1 score for class \( i \), and \( N \) is the total number of classes. The F1 score for each class is the harmonic mean of precision and recall for that class, providing a balance between the precision and recall metrics.
+where $$\( F1_i \) is the F1 score for class ##\( i \), and $$\( N \) is the total number of classes. The F1 score for each class is the harmonic mean of precision and recall for that class, providing a balance between the precision and recall metrics.
 
 $$
 \[ F1_{\text{Micro}} = \frac{2 \cdot \text{Precision}_{\text{micro}} \times \text{Recall}_{\text{micro}}}{\text{Precision}_{\text{micro}} + \text{Recall}_{\text{micro}}} \]
