@@ -66,6 +66,7 @@ dataset. Once the best parameters are identified, they are applied to instantiat
 ### EVALUATION:
 
 As explained earlier, we are choosing the f1-macro as the primary  evaluation metric for determining the best classification algorithm for us. Let us discuss the results of each classification algorithm in more detail.
+
 **2.1 NaiveBayes**
 We get the best performance on our test data for NaiveBayes as seen in Figure 5 with a f1-marco score of 0.98321. Our model performed
 better on test data than training data which had a f1-macro score of
@@ -88,3 +89,36 @@ of performance from our model. The curve starts offs with a precision and recall
 model was able to retrieve all the relevant instances (high recall)
 while also being correct in its retrieval (high precision) for most of
 its predictions.
+
+**2.2 LogisticRegression**
+
+For Logistic Regression, the confusion matrix demonstrates outstanding model performance on the test data, akin to the Naive
+Bayes results. It correctly classified 96 instances as class 0 and 42
+as class 1, while only misclassifying 2 instances of class 1 as class
+0, leading to a high f1-macro score, indicative of excellent precision and recall balance. The classification report mirrors this with
+perfect precision for class 0, high recall for class 1, and an overall
+accuracy of 0.99 and a f1-macro score of 0.98321 which can be
+seen in Figure 6
+
+**2.3 RandomForestClassifier**
+For the Random Forest classifier, the model displayed a high level
+of accuracy on the test data as well. The confusion matrix in Figure 7 shows 92 true negatives and 43 true positives, with slight
+misclassifications reflected by 4 false positives and 1 false negative.
+The f1-macro score of approximately 0.959 suggests a very effective model, although slightly less precise than the Naive Bayes and
+Logistic Regression models, with the precision-recall curve reinforcing the model’s strong performance.
+
+#### CONCLUSION 
+
+In our comprehensive analysis, from 1 it is evident that the Naive
+Bayes Classifier and Logistic Regression algorithms exhibited exceptional performance on our test dataset, post the meticulous
+process of hyperparameter tuning. This superior performance can
+largely be attributed to the underlying assumption of feature independence integral to both algorithms. Conversely, while the RandomForest Classifier also demonstrated commendable efficacy, a
+noticeable decline in performance was observed. This decline can
+likely be ascribed to the inherent characteristics of the RandomForest Classifier’s mechanism, which, in its attempt to closely learn
+from the training data, may have compromised its ability to generalize effectively, thereby affecting its performance on unseen data.
+This project highlighted the critical aspects of supervised
+learning, particularly hyperparameter optimization’s impact on
+model performance. Future efforts may delve into further refining
+model parameters, employing advanced ensemble techniques, and
+exploring new feature selection methods to boost accuracy and robustness. This assignment has reinforced the value of precision in
+machine learning workflows, explaining how important it is in realworld scenarios.
