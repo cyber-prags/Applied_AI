@@ -31,11 +31,15 @@ Figure 3. Heat-map showing the correlation between the various feautures Figure 
 Another important aspect for us was to determine our primary evaluation metric for our models. Given the slight imbalance in our dataset, we recognized that accuracy might not be the most suitable evaluation metric as it could be biased towards the majority class.
 A more appropriate metric for our needs is the f1-macro score, which averages the F1 scores computed for each class independently, thereby giving equal weight to each class irrespective of its size. The f1-macro score is particularly useful in situations like our where class imbalance is present, the F1-Macro score is calculated as follows:
 
+$$
 \[ F1_{\text{Macro}} = \frac{1}{N} \sum_{i=1}^{N} F1_i \]
+$$
 
 where \( F1_i \) is the F1 score for class \( i \), and \( N \) is the total number of classes. The F1 score for each class is the harmonic mean of precision and recall for that class, providing a balance between the precision and recall metrics.
 
+$$
 \[ F1_{\text{Micro}} = \frac{2 \cdot \text{Precision}_{\text{micro}} \times \text{Recall}_{\text{micro}}}{\text{Precision}_{\text{micro}} + \text{Recall}_{\text{micro}}} \]
+$$
 
 Additionally, we developed several functions to assist in evaluating our models more effectively. The evaluation matrix function is used to plot the confusion matrix and generate the classification report, providing insights into the precision, recall, and F1 score for each class. Furthermore, the plot precision-recall curve function helps visualize the trade-off between precision and recall for our models, offering a graphical representation of their performance across different thresholds.
 
